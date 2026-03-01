@@ -1,22 +1,22 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IRMAns for India">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f3f8fd"/>
+      <stop offset="0" stop-color="#fdf4f7"/>
       <stop offset="1" stop-color="#ffffff"/>
     </linearGradient>
     <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#1e629a"/>
-      <stop offset="1" stop-color="#b2872f"/>
+      <stop offset="0" stop-color="#7a102f"/>
+      <stop offset="1" stop-color="#c62852"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="110" cy="90" r="170" fill="#e5eff9"/>
-  <circle cx="1090" cy="560" r="210" fill="#f9f0df"/>
+  <circle cx="110" cy="90" r="170" fill="#f5e2e8"/>
+  <circle cx="1090" cy="560" r="210" fill="#f9e6ec"/>
   <rect x="70" y="84" width="210" height="14" rx="7" fill="url(#bar)"/>
-  <text x="70" y="185" fill="#0f3d66" font-family="Georgia, serif" font-size="70" font-weight="700">IRMAns for India</text>
-  <text x="70" y="248" fill="#1f3348" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600">AI, AGI, ASI in plain language for IRMA alumni</text>
-  <text x="70" y="315" fill="#445566" font-family="Arial, Helvetica, sans-serif" font-size="28">From article to action: practical guidance for India’s abundance transition</text>
-  <rect x="70" y="390" width="1060" height="150" rx="20" fill="#ffffff" stroke="#d9e6f1"/>
-  <text x="105" y="456" fill="#1e629a" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Evidence-first. Inclusion-first. Human dignity first.</text>
-  <text x="105" y="500" fill="#526477" font-family="Arial, Helvetica, sans-serif" font-size="24">irmansforindia.netlify.app</text>
+  <text x="70" y="185" fill="#7a102f" font-family="Georgia, serif" font-size="70" font-weight="700">IRMAns for India</text>
+  <text x="70" y="248" fill="#372d31" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600">AI, AGI, ASI in plain language for IRMA alumni</text>
+  <text x="70" y="315" fill="#66585e" font-family="Arial, Helvetica, sans-serif" font-size="28">From article to action: practical guidance for India’s abundance transition</text>
+  <rect x="70" y="390" width="1060" height="150" rx="20" fill="#ffffff" stroke="#ecdce2"/>
+  <text x="105" y="456" fill="#9e1b40" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Evidence-first. Inclusion-first. Human dignity first.</text>
+  <text x="105" y="500" fill="#715f66" font-family="Arial, Helvetica, sans-serif" font-size="24">irmansforindia.netlify.app</text>
 </svg>

@@ -22,19 +22,19 @@
   <meta name="twitter:image" content="https://irmansforindia.netlify.app/og-cover.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #ffffff;
-      --bg-soft: #fbfbfa;
-      --text: #14171c;
-      --muted: #57606e;
-      --line: #e8ebef;
-      --brand: #0f3d66;
-      --brand-2: #1e629a;
-      --accent: #b2872f;
-      --ok: #0d8a6b;
-      --shadow: 0 16px 40px rgba(18, 35, 52, 0.08);
+      --bg-soft: #fdf8f9;
+      --text: #191516;
+      --muted: #6b5c61;
+      --line: #ece3e6;
+      --brand: #7a102f;
+      --brand-2: #9e1b40;
+      --accent: #c62852;
+      --ok: #8a1334;
+      --shadow: 0 16px 40px rgba(58, 20, 31, 0.08);
       --radius-lg: 18px;
       --radius-md: 12px;
       --max: 1180px;
@@ -50,11 +50,11 @@
 
     body {
       margin: 0;
-      font-family: "Manrope", sans-serif;
+      font-family: "Source Sans 3", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 0% 0%, rgba(30, 98, 154, 0.06), transparent 28%),
-        radial-gradient(circle at 98% 0%, rgba(178, 135, 47, 0.08), transparent 30%),
+        radial-gradient(circle at 0% 0%, rgba(122, 16, 47, 0.07), transparent 28%),
+        radial-gradient(circle at 98% 0%, rgba(198, 40, 82, 0.08), transparent 30%),
         var(--bg);
       line-height: 1.65;
       letter-spacing: 0.01em;
@@ -66,7 +66,7 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background: rgba(15, 61, 102, 0.08);
+      background: rgba(122, 16, 47, 0.08);
       z-index: 120;
     }
 
@@ -133,8 +133,8 @@
     .toc a:hover,
     .toc a.active {
       color: var(--brand);
-      background: #f1f6fb;
-      border-color: #d8e6f3;
+      background: #faf2f5;
+      border-color: #efdde3;
     }
 
     main {
@@ -169,10 +169,10 @@
     h1,
     h2,
     h3 {
-      font-family: "Fraunces", serif;
+      font-family: "Merriweather", serif;
       line-height: 1.15;
       margin: 0 0 0.45rem;
-      color: #0f1620;
+      color: #1b1618;
     }
 
     h1 {
@@ -190,7 +190,7 @@
 
     p {
       margin: 0.5rem 0;
-      color: #27313e;
+      color: #2f2629;
       font-size: clamp(0.95rem, 1.5vw, 1.03rem);
     }
 
@@ -201,7 +201,7 @@
     .lead {
       font-size: clamp(1.02rem, 1.75vw, 1.16rem);
       max-width: 68ch;
-      color: #1a2431;
+      color: #2a2023;
     }
 
     .chips {
@@ -213,9 +213,9 @@
 
     .chip {
       border-radius: 999px;
-      border: 1px solid #dbe6f2;
-      background: #f5f9fd;
-      color: #1b4d79;
+      border: 1px solid #f1e2e7;
+      background: #fcf6f8;
+      color: #7c1532;
       font-size: 0.79rem;
       font-weight: 600;
       padding: 0.38rem 0.72rem;
@@ -236,9 +236,9 @@
     }
 
     .stat .v {
-      font-family: "Fraunces", serif;
+      font-family: "Merriweather", serif;
       font-size: clamp(1.25rem, 2.6vw, 1.85rem);
-      color: #0f3d66;
+      color: #7a102f;
       line-height: 1.1;
     }
 
@@ -288,7 +288,7 @@
 
     .card li {
       font-size: 0.92rem;
-      color: #2b3645;
+      color: #372d31;
       margin-top: 0.22rem;
     }
 
@@ -312,7 +312,7 @@
     .stage {
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, #fff, #fbfdff);
+      background: linear-gradient(180deg, #fff, #fdf8fa);
       padding: 0.95rem;
       position: relative;
       overflow: hidden;
@@ -326,14 +326,14 @@
       width: 90px;
       height: 90px;
       border-radius: 50%;
-      background: rgba(30, 98, 154, 0.08);
+      background: rgba(158, 27, 64, 0.08);
     }
 
     .stage .tag {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: #31658f;
+      color: #8c1740;
       font-weight: 700;
     }
 
@@ -348,7 +348,7 @@
 
     .stage li {
       font-size: 0.92rem;
-      color: #2b3645;
+      color: #372d31;
     }
 
     .flow {
@@ -366,13 +366,13 @@
     }
 
     .node {
-      border: 1px solid #d9e5f1;
+      border: 1px solid #ecdce2;
       border-radius: 10px;
       padding: 0.6rem;
       text-align: center;
       font-size: 0.83rem;
-      color: #1f2f42;
-      background: #f8fbff;
+      color: #3a2a2e;
+      background: #fdf7f9;
       font-weight: 600;
       position: relative;
     }
@@ -383,7 +383,7 @@
       right: -0.38rem;
       top: 50%;
       transform: translateY(-50%);
-      color: #7696b4;
+      color: #a67b8a;
       font-weight: 700;
       background: #fff;
       width: 0.8rem;
@@ -409,16 +409,16 @@
       position: absolute;
       right: 0.72rem;
       top: -0.24rem;
-      font-family: "Fraunces", serif;
+      font-family: "Merriweather", serif;
       font-size: 2.6rem;
-      color: rgba(15, 61, 102, 0.11);
+      color: rgba(122, 16, 47, 0.14);
       line-height: 1;
     }
 
     .snapshot p {
       margin: 0;
       font-size: 0.93rem;
-      color: #222d3b;
+      color: #34282b;
     }
 
     .snapshot .meta {
@@ -426,7 +426,7 @@
       font-size: 0.73rem;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #6b7380;
+      color: #82737a;
     }
 
     details {
@@ -441,7 +441,7 @@
       list-style: none;
       cursor: pointer;
       font-weight: 700;
-      color: #183d60;
+      color: #6f1230;
       padding-right: 1rem;
       position: relative;
     }
@@ -455,7 +455,7 @@
       position: absolute;
       right: 0;
       top: -0.03rem;
-      color: #376c98;
+      color: #9e1d47;
       font-size: 1.05rem;
     }
 
@@ -467,7 +467,7 @@
     details li {
       font-size: 0.93rem;
       margin-top: 0.45rem;
-      color: #273344;
+      color: #31272b;
     }
 
     .actions {
@@ -488,7 +488,7 @@
       font-size: 0.74rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #31658f;
+      color: #8c1740;
     }
 
     .action h3 {
@@ -499,7 +499,7 @@
 
     .small {
       font-size: 0.84rem;
-      color: #5b6573;
+      color: #715f66;
       margin-top: 0.4rem;
     }
 
@@ -523,8 +523,8 @@
     }
 
     .matrix th {
-      background: #f7fbff;
-      color: #1e4e77;
+      background: #fdf6f8;
+      color: #7a1433;
       font-size: 0.8rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -535,13 +535,13 @@
     }
 
     .faq-note {
-      border: 1px solid #d9e6f1;
-      background: #f8fbff;
+      border: 1px solid #efdde3;
+      background: #fdf7f9;
       border-radius: var(--radius-md);
       padding: 0.75rem 0.85rem;
       margin-top: 0.8rem;
       font-size: 0.9rem;
-      color: #324355;
+      color: #463338;
     }
 
     .sources {
@@ -554,7 +554,7 @@
       margin: 0 0 0.42rem;
       break-inside: avoid;
       font-size: 0.84rem;
-      color: #3d4959;
+      color: #504348;
     }
 
     .footer {
@@ -562,14 +562,14 @@
       border-top: 1px solid var(--line);
       padding-top: 1rem;
       font-size: 0.9rem;
-      color: #4e5a6b;
+      color: #66585e;
       text-align: center;
     }
 
     .footer a {
       font-weight: 700;
       text-decoration: none;
-      color: #0f3d66;
+      color: #7a102f;
     }
 
     @media (max-width: 980px) {
@@ -1413,7 +1413,7 @@
             <li><a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">IndiaAI Mission (PIB)</a></li>
             <li><a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">India AI Compute Update (PIB)</a></li>
             <li><a href="https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=60913" target="_blank" rel="noopener">RBI Digital Payments Index</a></li>
-            <li><a href="https://www.irma.ac.in/programmes/alumni/overview" target="_blank" rel="noopener">IRMA Alumni Network Context</a></li>
+            <li>IRMA Alumni Network Context (irma.ac.in/programmes/alumni/overview)</li>
           </ul>
         </article>
         <article class="card">
@@ -1433,8 +1433,8 @@
       </div>
 
       <div class="sources">
-        <p>[1] IRMA official site: <a href="https://irma.ac.in/" target="_blank" rel="noopener">irma.ac.in</a></p>
-        <p>[2] IRMA Alumni overview (4000+): <a href="https://www.irma.ac.in/programmes/alumni/overview" target="_blank" rel="noopener">irma.ac.in/programmes/alumni/overview</a></p>
+        <p>[1] IRMA official site: irma.ac.in</p>
+        <p>[2] IRMA Alumni overview (4000+): irma.ac.in/programmes/alumni/overview</p>
         <p>[3] PIB: IndiaAI Mission outlay ₹10,371.92 crore (7 Mar 2024): <a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">pib.gov.in</a></p>
         <p>[4] PIB: National compute crossed 34,000 GPUs by 30 May 2025: <a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">pib.gov.in</a></p>
         <p>[5] RBI: Digital Payments Index March 2025 = 493.22: <a href="https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=60913" target="_blank" rel="noopener">rbi.org.in</a></p>
