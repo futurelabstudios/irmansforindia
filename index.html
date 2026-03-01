@@ -262,6 +262,13 @@
       margin-top: 0.9rem;
     }
 
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.9rem;
+    }
+
     .card {
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
@@ -272,6 +279,17 @@
     .card p {
       margin: 0.3rem 0;
       font-size: 0.94rem;
+    }
+
+    .card ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1rem;
+    }
+
+    .card li {
+      font-size: 0.92rem;
+      color: #2b3645;
+      margin-top: 0.22rem;
     }
 
     .kicker {
@@ -485,6 +503,47 @@
       margin-top: 0.4rem;
     }
 
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+
+    .matrix th,
+    .matrix td {
+      border-bottom: 1px solid var(--line);
+      padding: 0.72rem;
+      text-align: left;
+      vertical-align: top;
+      background: #fff;
+    }
+
+    .matrix th {
+      background: #f7fbff;
+      color: #1e4e77;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .matrix tr:last-child td {
+      border-bottom: none;
+    }
+
+    .faq-note {
+      border: 1px solid #d9e6f1;
+      background: #f8fbff;
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0.85rem;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: #324355;
+    }
+
     .sources {
       columns: 2;
       gap: 1.2rem;
@@ -516,6 +575,7 @@
     @media (max-width: 980px) {
       .grid-3,
       .grid-2,
+      .grid-4,
       .ai-ladder,
       .flow-row {
         grid-template-columns: 1fr;
@@ -569,7 +629,9 @@
       <nav class="toc" aria-label="Main navigation">
         <a href="#overview">Overview</a>
         <a href="#article-short">Article in Short</a>
+        <a href="#impact-map">Impact Map</a>
         <a href="#irma-role">IRMA Role</a>
+        <a href="#common-good">For Professionals</a>
         <a href="#faq">FAQ</a>
         <a href="#action">Action Plan</a>
         <a href="#sources">Sources</a>
@@ -580,15 +642,15 @@
   <main>
     <section id="overview" class="panel">
       <span class="eyebrow">For IRMA Alumni</span>
-      <h1>A simple guide to the AI Revolution, for the <a href="https://irma.ac.in/" target="_blank" rel="noopener">IRMA community</a></h1>
+      <h1>A detailed guide for the <a href="https://irma.ac.in/" target="_blank" rel="noopener">IRMA community</a> on AI and social transformation</h1>
       <p class="lead">
-        This page helps IRMAns understand the core idea of the Wait But Why article in plain language, then converts it into practical work for India: less scarcity, better public services, and more dignity in everyday life.
+        This page is designed for IRMA alumni who want both conceptual clarity and practical direction. It explains AI, AGI, and ASI in simple terms, then goes deeper into how professionals can use AI responsibly for common good in India.
       </p>
 
       <div class="chips">
-        <span class="chip">Short and simple reading</span>
-        <span class="chip">Grounded in real data</span>
-        <span class="chip">Built for mobile and desktop</span>
+        <span class="chip">Long-form but easy to navigate</span>
+        <span class="chip">Grounded in public data</span>
+        <span class="chip">Actionable for working professionals</span>
       </div>
 
       <div class="stats">
@@ -609,14 +671,14 @@
           <div class="l">RBI Digital Payments Index (Mar 2025)</div>
         </article>
       </div>
-      <p class="small">Latest available figures used as of 1 March 2026.</p>
+      <p class="small">Latest available figures used as of 1 March 2026. The aim is evidence-led discussion, not hype.</p>
     </section>
 
     <section id="article-short" class="panel">
       <span class="eyebrow">Wait But Why, Simplified</span>
-      <h2>The article in 3 minutes</h2>
+      <h2>The article in 3 minutes, then in depth</h2>
       <p>
-        The article says: AI progress may look gradual today, but once systems reach general intelligence, change could become very fast. So society should prepare early, not late.
+        The core argument in the Wait But Why article is that technological change may feel slow for a while, then become extremely fast once AI systems become more general and self-improving. The practical implication is simple: prepare institutions now.
       </p>
 
       <div class="ai-ladder">
@@ -656,39 +718,124 @@
         <div class="flow-row">
           <div class="node">More compute</div>
           <div class="node">Better models</div>
-          <div class="node">Broader capability</div>
+          <div class="node">General capability</div>
           <div class="node">Self-improvement loops</div>
           <div class="node">Very fast transition risk</div>
         </div>
         <p class="small">
-          Practical takeaway: do not wait for certainty. Build capability, ethics, and public safeguards in parallel.
+          Practical takeaway: do not wait for certainty. Build capability, governance, and social safeguards in parallel.
         </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>What the article gets right</h3>
+          <ul>
+            <li>People often underestimate exponential improvement in technical systems.</li>
+            <li>Even narrow AI can reshape institutions before AGI arrives.</li>
+            <li>Governance usually lags technology unless intentional preparation begins early.</li>
+            <li>The transition is not only technical; it is civilizational.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>What professionals should adapt for India</h3>
+          <ul>
+            <li>Do not assume uniform digital readiness across districts and communities.</li>
+            <li>Design for assisted access: voice, local language, and human facilitation.</li>
+            <li>Treat AI as public infrastructure when used in welfare, justice, health, and livelihoods.</li>
+            <li>Track inclusion outcomes, not only productivity outcomes.</li>
+          </ul>
+        </article>
       </div>
 
       <div class="grid-3">
         <article class="card">
-          <span class="kicker">Simple truth</span>
-          <h3>AI won’t solve everything</h3>
-          <p>Technology can reduce operational scarcity, but social trust, justice, and cohesion still require human institutions.</p>
+          <span class="kicker">Reality Check</span>
+          <h3>AI won’t solve politics</h3>
+          <p>AI can improve delivery systems and reduce friction, but it cannot replace democratic negotiation, law, and institutions.</p>
         </article>
         <article class="card">
-          <span class="kicker">Simple truth</span>
-          <h3>Progress can be non-linear</h3>
-          <p>Long periods of slow progress can be followed by sudden jumps. Planning must assume discontinuity.</p>
+          <span class="kicker">Reality Check</span>
+          <h3>Speed can surprise</h3>
+          <p>What feels incremental can turn structural quickly. Skill systems and governance must be designed for sudden shifts.</p>
         </article>
         <article class="card">
-          <span class="kicker">Simple truth</span>
-          <h3>Preparation beats reaction</h3>
-          <p>Skilling, governance, and local deployment models should start now, not after disruption is visible.</p>
+          <span class="kicker">Reality Check</span>
+          <h3>Proof beats claims</h3>
+          <p>Credibility is earned through transparent pilots, measurable outcomes, and repeatability across contexts.</p>
         </article>
       </div>
+    </section>
+
+    <section id="impact-map" class="panel">
+      <span class="eyebrow">In-Depth Analysis</span>
+      <h2>How AI can reshape society, economy, and state capacity</h2>
+      <p>
+        AI’s impact is not one single story. It creates gains and risks simultaneously. For professionals, the right question is: which systems improve, who benefits, who is excluded, and what safeguards are active.
+      </p>
+
+      <div class="grid-4">
+        <article class="card">
+          <h3>Labor Markets</h3>
+          <p>Routine cognitive work will automate first; demand rises for roles involving judgment, trust, field coordination, and interdisciplinary design.</p>
+        </article>
+        <article class="card">
+          <h3>Public Services</h3>
+          <p>Potential gains in grievance redressal, eligibility screening, document flow, and case triage, if accountability remains human-led.</p>
+        </article>
+        <article class="card">
+          <h3>Knowledge Access</h3>
+          <p>High-quality guidance may become cheap and scalable through multilingual assistants, reducing expert scarcity in remote areas.</p>
+        </article>
+        <article class="card">
+          <h3>Power Structures</h3>
+          <p>Without governance, AI can centralize control and bias. With governance, it can democratize insight and reduce rent-seeking bottlenecks.</p>
+        </article>
+      </div>
+
+      <table class="matrix" aria-label="Opportunity and risk matrix">
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>High-Value Opportunity</th>
+            <th>Primary Risk</th>
+            <th>Governance Response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Agriculture</td>
+            <td>Localized crop, market, and weather advisory at scale</td>
+            <td>Over-reliance on weak or biased recommendations</td>
+            <td>Human agronomist escalation + transparent model limits</td>
+          </tr>
+          <tr>
+            <td>Health</td>
+            <td>Faster triage and frontline decision support</td>
+            <td>Unsafe automation in critical diagnosis</td>
+            <td>Clinical override protocols + audit logs + liability clarity</td>
+          </tr>
+          <tr>
+            <td>Welfare Delivery</td>
+            <td>Lower delay and leakage in entitlements</td>
+            <td>Algorithmic exclusion of vulnerable groups</td>
+            <td>Appeal mechanisms + inclusion audits + offline fallback</td>
+          </tr>
+          <tr>
+            <td>Local Governance</td>
+            <td>Better planning, monitoring, and grievance routing</td>
+            <td>Opaque systems that weaken citizen trust</td>
+            <td>Public dashboards + explainability summaries + social audits</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="irma-role" class="panel">
       <span class="eyebrow">IRMA Lens</span>
       <h2>Why IRMAns are critical in this transition</h2>
       <p>
-        IRMAns can connect high technology with ground reality. That bridge is the real scarcity in India.
+        IRMAns can translate technology into trusted social systems. This translation layer is where many AI projects fail and where IRMAns can create disproportionate value.
       </p>
 
       <div class="grid-2">
@@ -700,33 +847,94 @@
         </article>
 
         <article class="card">
-          <h3>What this means in practice</h3>
-          <p>Build voice-first AI services in local languages for last-mile users.</p>
-          <p>Deploy “human + AI” models where frontline workers stay accountable.</p>
-          <p>Publish evidence dashboards: turnaround time, grievance closure, error rates, trust scores.</p>
+          <h3>Where IRMAns can lead immediately</h3>
+          <p>Design voice-first AI services in local languages for last-mile use.</p>
+          <p>Create district-level implementation playbooks for NGOs and state programs.</p>
+          <p>Build monitoring frameworks with social, operational, and ethical indicators.</p>
         </article>
       </div>
 
       <div class="grid-3">
         <article class="card">
           <h3>Society</h3>
-          <p>Use AI to widen access to guidance, not replace local dialogue and empathy.</p>
+          <p>Use AI to widen access to guidance while preserving community mediation and social trust-building.</p>
         </article>
         <article class="card">
           <h3>Economy</h3>
-          <p>Use AI to strengthen producer incomes, MSME productivity, and public service efficiency.</p>
+          <p>Use AI to strengthen producer incomes, small enterprise productivity, and quality of service delivery.</p>
         </article>
         <article class="card">
           <h3>Politics</h3>
-          <p>Use AI for transparency and delivery quality, while keeping constitutional institutions central.</p>
+          <p>Use AI for transparency, but keep constitutional accountability and citizen rights at the center.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="common-good" class="panel">
+      <span class="eyebrow">Professional Practice</span>
+      <h2>How professionals can exercise AI for common good</h2>
+      <p>
+        The goal is not “AI adoption” in abstraction. The goal is measurable public value with safeguards. Use this as a practical operating protocol.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>1. Start with a public problem</h3>
+          <p>Pick one concrete pain point: delayed pensions, poor grievance closure, crop advisory mismatch, school learning support, etc.</p>
+        </article>
+        <article class="card">
+          <h3>2. Define the metric before the model</h3>
+          <p>Set baseline and target first: time-to-service, error rate, inclusion gap, trust score, cost per case.</p>
+        </article>
+        <article class="card">
+          <h3>3. Keep a human accountable</h3>
+          <p>AI can recommend; institutions decide. No high-stakes decision should be fully unreviewed.</p>
+        </article>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>4. Design for the last mile</h3>
+          <p>Assume low bandwidth, multilingual needs, low digital fluency, and assisted usage scenarios.</p>
+        </article>
+        <article class="card">
+          <h3>5. Publish model limits</h3>
+          <p>State what the system can do, cannot do, and when to escalate to human experts.</p>
+        </article>
+        <article class="card">
+          <h3>6. Institutionalize audits</h3>
+          <p>Run bias audits, failure reviews, and grievance analytics on fixed intervals.</p>
+        </article>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Professional accountability checklist</h3>
+          <ul>
+            <li>Is the problem definition socially grounded?</li>
+            <li>Is there a fallback path when AI fails?</li>
+            <li>Are affected communities represented in design?</li>
+            <li>Is there a documented appeals mechanism?</li>
+            <li>Are outcomes published in understandable language?</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Leadership stance for IRMAns</h3>
+          <ul>
+            <li>Resist overclaiming and under-measuring.</li>
+            <li>Make evidence public, including failed pilots.</li>
+            <li>Train teams in ethics, operations, and social context together.</li>
+            <li>Build coalitions: state, civil society, academia, market actors.</li>
+            <li>Protect dignity and rights as non-negotiable design principles.</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <section id="faq" class="panel">
       <span class="eyebrow">Thread to Clarity</span>
-      <h2>Selected alumni concerns and short answers</h2>
-      <p>Only the most relevant concerns are included below, in FAQ format.</p>
+      <h2>Detailed FAQ for alumni and professionals</h2>
+      <p>The following FAQ addresses common concerns from the thread and broader practitioner questions.</p>
 
       <div class="snapshot-grid" aria-label="Selected conversation snapshots">
         <article class="snapshot">
@@ -747,59 +955,114 @@
         </article>
       </div>
 
+      <div class="faq-note">
+        Use these answers as operating hypotheses. In practice, always localize by district context and validate with field data.
+      </div>
+
       <details open>
-        <summary>Is this claim too big?</summary>
-        <p>It becomes credible only with proof. Use measurable pilots and publish results publicly every month.</p>
+        <summary>1. Is this vision too ambitious for India right now?</summary>
+        <p>Ambition is acceptable; vague claims are not. Treat every claim as testable and publish proof by milestones.</p>
       </details>
-
       <details>
-        <summary>Can AI end social division by itself?</summary>
-        <p>No. AI can reduce service scarcity and unfairness, but social healing requires ethics, institutions, and leadership.</p>
+        <summary>2. Can AI by itself solve communal tension and social polarization?</summary>
+        <p>No. AI can improve fairness in delivery systems, but social conflict requires political, legal, and cultural work.</p>
       </details>
-
       <details>
-        <summary>What about people with limited literacy?</summary>
-        <p>Design voice-first systems in local languages with assisted usage by field workers. “Text-only AI” is not enough for India.</p>
+        <summary>3. If literacy is uneven, how can AI be inclusive?</summary>
+        <p>Use voice interfaces, local languages, assisted access points, and community mediators. Inclusion must be designed, not assumed.</p>
       </details>
-
       <details>
-        <summary>What would count as real progress in 12 months?</summary>
-        <p>
-          Faster grievance resolution, lower service-delivery delays, better targeting of schemes, and higher trust from communities.
-        </p>
+        <summary>4. Will AI mostly eliminate jobs?</summary>
+        <p>Some tasks will disappear, many jobs will reconfigure. New demand rises for coordination, judgment, care, and field integration.</p>
+      </details>
+      <details>
+        <summary>5. How should NGOs responsibly adopt AI?</summary>
+        <p>Start with one workflow, define success metrics, train staff, maintain human review, and create a grievance channel.</p>
+      </details>
+      <details>
+        <summary>6. What is the minimum proof standard for a public-interest AI pilot?</summary>
+        <p>Baseline data, intervention log, outcome metrics, error analysis, inclusion impact, and independent review summary.</p>
+      </details>
+      <details>
+        <summary>7. How do we prevent AI from becoming only a marketing narrative?</summary>
+        <p>Require monthly evidence dashboards and independent validation. Reward outcomes, not announcements.</p>
+      </details>
+      <details>
+        <summary>8. Should we wait for AGI before acting?</summary>
+        <p>No. Most near-term public value comes from current AI systems if implemented responsibly.</p>
+      </details>
+      <details>
+        <summary>9. How do we handle bias in models serving vulnerable communities?</summary>
+        <p>Use representative data, periodic fairness audits, community review, and clear appeal pathways.</p>
+      </details>
+      <details>
+        <summary>10. Can AI help reduce corruption in service delivery?</summary>
+        <p>It can reduce process opacity through audit trails and anomaly detection, but strong institutional enforcement is still required.</p>
+      </details>
+      <details>
+        <summary>11. What should district administrators ask vendors before deployment?</summary>
+        <p>Ask about data governance, model limits, human override, auditability, security controls, and accountability in case of harm.</p>
+      </details>
+      <details>
+        <summary>12. How can cooperatives and FPOs use AI meaningfully?</summary>
+        <p>Demand forecasting, procurement planning, input optimization, price advisory, and multilingual member communication.</p>
+      </details>
+      <details>
+        <summary>13. Is open-source AI always better for social impact?</summary>
+        <p>Not always. Choose based on capability, safety, cost, localization needs, and long-term maintainability.</p>
+      </details>
+      <details>
+        <summary>14. How should professionals balance speed and safety?</summary>
+        <p>Use phased deployment: sandbox, controlled pilot, monitored scale-up, then institutional adoption.</p>
+      </details>
+      <details>
+        <summary>15. What metrics matter beyond efficiency?</summary>
+        <p>Trust scores, equity impact, grievance resolution quality, and user dignity indicators matter as much as speed/cost.</p>
+      </details>
+      <details>
+        <summary>16. What would real success look like in 2 years?</summary>
+        <p>Replicable district models, measurable inclusion gains, lower service delays, and durable institutional ownership.</p>
+      </details>
+      <details>
+        <summary>17. What mistakes should we avoid in the first 6 months?</summary>
+        <p>Over-scoping, poor data hygiene, ignoring frontline users, and deploying without escalation protocols.</p>
+      </details>
+      <details>
+        <summary>18. How can IRMA alumni collaborate at scale?</summary>
+        <p>Form domain cohorts, share common templates, publish open evidence, and mentor state/NGO implementation teams.</p>
       </details>
     </section>
 
     <section id="action" class="panel">
       <span class="eyebrow">Execution</span>
-      <h2>A short action plan for IRMA alumni</h2>
+      <h2>An expanded action roadmap for IRMA alumni</h2>
       <div class="actions">
         <article class="action">
-          <strong>Month 1</strong>
-          <h3>Form IRMAN AI working groups</h3>
-          <p>Choose domains: agriculture, health, livelihoods, local governance, justice access.</p>
+          <strong>Month 0-1</strong>
+          <h3>Constitute domain squads</h3>
+          <p>Set up squads for agriculture, livelihoods, health, local governance, and justice access.</p>
         </article>
 
         <article class="action">
-          <strong>Month 2-3</strong>
-          <h3>Run two district pilots</h3>
-          <p>Start small and measurable: one rural district and one urban-poor cluster.</p>
+          <strong>Month 2-4</strong>
+          <h3>Deploy measured pilots</h3>
+          <p>Launch one rural and one urban-poor pilot per domain with clear baseline metrics.</p>
         </article>
 
         <article class="action">
-          <strong>Month 4-6</strong>
-          <h3>Open public proof board</h3>
-          <p>Share baseline vs outcome metrics so claims are evidence-based.</p>
+          <strong>Month 5-8</strong>
+          <h3>Publish proof dashboards</h3>
+          <p>Release monthly scorecards with successes, failures, and corrective actions.</p>
         </article>
 
         <article class="action">
-          <strong>Month 7-12</strong>
-          <h3>Scale what works</h3>
-          <p>Institutionalize successful workflows through NGOs, state systems, and partner networks.</p>
+          <strong>Month 9-24</strong>
+          <h3>Institutionalize and scale</h3>
+          <p>Integrate proven workflows into NGO/state operations with training and governance playbooks.</p>
         </article>
       </div>
       <p class="small">
-        Rule: no claim without data, no scale without inclusion, no deployment without accountability.
+        Operating rule: no claim without data, no scale without inclusion, no automation without accountability.
       </p>
     </section>
 
