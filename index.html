@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>IRMAns for India | AI, AGI, ASI in Plain Language</title>
-  <meta name="description" content="A simple, premium guide for IRMA alumni to understand the AI Revolution article and shape India’s abundance transition." />
+  <title>IRMAns for India | A Practical AI Field Guide for Social Impact Leaders</title>
+  <meta name="description" content="A professional, evidence-backed guide for IRMA alumni and development practitioners to understand AI transitions and lead responsible implementation for public good in India." />
   <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://irmansforindia.netlify.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="IRMAns for India" />
-  <meta property="og:title" content="IRMAns for India | AI, AGI, ASI in Plain Language" />
-  <meta property="og:description" content="A simple, premium guide for IRMA alumni to understand AI, AGI, ASI and contribute to India’s abundance transition." />
+  <meta property="og:title" content="IRMAns for India | A Practical AI Field Guide for Social Impact Leaders" />
+  <meta property="og:description" content="Evidence-backed guidance for IRMA alumni to navigate AI, frontier technology, and responsible institutional adoption in India." />
   <meta property="og:url" content="https://irmansforindia.netlify.app/" />
   <meta property="og:image" content="https://irmansforindia.netlify.app/og-cover.svg" />
   <meta property="og:image:alt" content="IRMAns for India cover image" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="IRMAns for India | AI, AGI, ASI in Plain Language" />
-  <meta name="twitter:description" content="A simple, premium guide for IRMA alumni to understand AI, AGI, ASI and contribute to India’s abundance transition." />
+  <meta name="twitter:title" content="IRMAns for India | A Practical AI Field Guide for Social Impact Leaders" />
+  <meta name="twitter:description" content="Evidence-backed guidance for IRMA alumni to navigate AI, frontier technology, and responsible institutional adoption in India." />
   <meta name="twitter:image" content="https://irmansforindia.netlify.app/og-cover.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -156,6 +156,24 @@
       padding: clamp(1rem, 2.2vw, 2rem);
     }
 
+    #overview.panel {
+      position: relative;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(253, 246, 248, 0.98));
+      border-color: #e8d8df;
+      overflow: hidden;
+    }
+
+    #overview.panel::after {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #7a102f, #c62852 58%, #7a102f);
+      opacity: 0.85;
+    }
+
     .eyebrow {
       display: inline-block;
       font-size: 0.72rem;
@@ -204,48 +222,93 @@
       color: #2a2023;
     }
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.92fr;
+      gap: 1rem;
+      align-items: start;
       margin-top: 0.9rem;
     }
 
-    .chip {
-      border-radius: 999px;
-      border: 1px solid #f1e2e7;
-      background: #fcf6f8;
-      color: #7c1532;
-      font-size: 0.79rem;
-      font-weight: 600;
-      padding: 0.38rem 0.72rem;
+    .hero-copy p {
+      margin-top: 0.65rem;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 0.75rem;
-      margin-top: 1rem;
+    .hero-note {
+      border: 1px solid #ead7de;
+      background: #fffafc;
+      border-radius: 12px;
+      padding: 0.8rem 0.9rem;
+      margin-top: 0.9rem;
     }
 
-    .stat {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: var(--radius-md);
-      padding: 0.85rem;
+    .hero-note h3 {
+      margin-bottom: 0.25rem;
+      font-size: 1.02rem;
     }
 
-    .stat .v {
-      font-family: "Merriweather", serif;
-      font-size: clamp(1.25rem, 2.6vw, 1.85rem);
-      color: #7a102f;
-      line-height: 1.1;
+    .hero-note ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1rem;
     }
 
-    .stat .l {
-      color: var(--muted);
-      font-size: 0.82rem;
+    .hero-note li {
+      font-size: 0.92rem;
+      color: #3b2f33;
       margin-top: 0.2rem;
+    }
+
+    .signal-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .signal {
+      border: 1px solid #ebdde2;
+      border-radius: 12px;
+      background: #fff;
+      padding: 0.8rem 0.85rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signal::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, #7a102f, #c62852);
+    }
+
+    .signal-value {
+      font-family: "Merriweather", serif;
+      font-size: clamp(1.1rem, 2.4vw, 1.48rem);
+      color: #71132f;
+      line-height: 1.16;
+      margin-bottom: 0.12rem;
+    }
+
+    .signal-context {
+      font-size: 0.88rem;
+      color: #3c3135;
+    }
+
+    .signal-source {
+      margin-top: 0.35rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #80656f;
+      font-weight: 700;
+    }
+
+    .signal-source a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dotted #b99aa5;
     }
 
     .grid-3 {
@@ -581,6 +644,10 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
       .node:not(:last-child)::after {
         content: "\2193";
         right: 50%;
@@ -614,8 +681,8 @@
         padding: 0.38rem 0.62rem;
       }
 
-      .stats {
-        grid-template-columns: 1fr 1fr;
+      .signal {
+        padding: 0.72rem 0.78rem;
       }
     }
   </style>
@@ -645,42 +712,54 @@
   <main>
     <section id="overview" class="panel">
       <span class="eyebrow">For IRMA Alumni</span>
-      <h1>A professional field guide to AI, frontier technology, and social transition</h1>
+      <h1>AI is no longer a technology briefing. It is an implementation test for institutions.</h1>
       <p class="lead">
-        This document is written for professionals who need clarity, not slogans. AI capability is improving quickly. Infrastructure investment is accelerating. Institutional readiness, however, is uneven. The central challenge for India is to convert technical progress into broad public value while protecting trust, rights, and social cohesion.
-      </p>
-      <p>
-        In practical terms, this means two things. First, there is genuine upside in productivity, scientific discovery, and public service quality. Second, there are real risks in concentration of power, labor disruption, algorithmic exclusion, and weak accountability. Both can be true at the same time, and responsible leadership must work with that dual reality.
-      </p>
-      <p>
-        For the IRMA community, the opportunity is strategic. IRMAns understand institutions, rural systems, informal networks, and implementation complexity. That combined lens is exactly what this transition requires.
+        In the coming cycle, agriculture advisories, skilling systems, health workflows, finance inclusion, welfare delivery, and local governance will all be reshaped by AI-enabled decisions. The key question is no longer whether this shift is real. The key question is whether it will be guided by professionals who understand both technology and social reality.
       </p>
 
-      <div class="chips">
-        <span class="chip">Seasoned and practical tone</span>
-        <span class="chip">Simple language, serious analysis</span>
-        <span class="chip">Designed for policy and field execution</span>
-      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p>
+            This report is written for that responsibility. It avoids hype, avoids fatalism, and treats AI as a practical governance challenge: how to deploy useful capability, protect trust, and keep benefits broadly distributed.
+          </p>
+          <p>
+            For IRMAns, this is a natural leadership role. The community brings field experience, institutional discipline, and deep familiarity with rural and vulnerable contexts where poor implementation can do real harm and good implementation can create lasting public value.
+          </p>
 
-      <div class="stats">
-        <article class="stat">
-          <div class="v">4,000+</div>
-          <div class="l">IRMA Alumni Association members</div>
-        </article>
-        <article class="stat">
-          <div class="v">₹10,371.92 Cr</div>
-          <div class="l">IndiaAI Mission outlay (approved 7 Mar 2024)</div>
-        </article>
-        <article class="stat">
-          <div class="v">34,000+</div>
-          <div class="l">National AI compute GPUs crossed by 30 May 2025</div>
-        </article>
-        <article class="stat">
-          <div class="v">493.22</div>
-          <div class="l">RBI Digital Payments Index (Mar 2025)</div>
-        </article>
+          <div class="hero-note">
+            <h3>What this report helps you do quickly</h3>
+            <ul>
+              <li>Understand AI, AGI, and frontier risk in plain professional language.</li>
+              <li>Identify where adoption should accelerate and where controls must be stronger.</li>
+              <li>Translate concern into an implementable agenda for public-good outcomes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="signal-grid" aria-label="High-signal indicators">
+          <article class="signal">
+            <div class="signal-value">86% of employers</div>
+            <div class="signal-context">expect AI and information-processing technologies to transform business models by 2030.</div>
+            <div class="signal-source"><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/1-drivers-of-labour-market-transformation/" target="_blank" rel="noopener">WEF Future of Jobs Report 2025</a></div>
+          </article>
+          <article class="signal">
+            <div class="signal-value">39% of current skills</div>
+            <div class="signal-context">are expected to change by 2030, making professional upskilling non-optional.</div>
+            <div class="signal-source"><a href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" target="_blank" rel="noopener">WEF press brief, 8 Jan 2025</a></div>
+          </article>
+          <article class="signal">
+            <div class="signal-value">Almost 40% of global employment</div>
+            <div class="signal-context">is exposed to AI, with differentiated effects across economies and worker profiles.</div>
+            <div class="signal-source"><a href="https://www.imf.org/-/media/Files/Publications/SDN/2024/English/SDNEA2024001.ashx" target="_blank" rel="noopener">IMF Staff Discussion Note, Jan 2024</a></div>
+          </article>
+          <article class="signal">
+            <div class="signal-value">₹10,371.92 crore</div>
+            <div class="signal-context">approved for the IndiaAI Mission, indicating clear national-level commitment to AI capacity.</div>
+            <div class="signal-source"><a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">PIB, Government of India, 7 Mar 2024</a></div>
+          </article>
+        </div>
       </div>
-      <p class="small">Latest available figures used as of 1 March 2026. Use this as a living brief and update it periodically.</p>
+      <p class="small">Figures above are selected for strategic relevance and are tied to primary public sources listed in the references section.</p>
     </section>
 
     <section id="article-short" class="panel">
@@ -963,6 +1042,27 @@
       <p>
         Responsible use of AI requires a full operating model: problem definition, risk classification, implementation quality, and public accountability. The framework below is intentionally detailed to support real institutional adoption.
       </p>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Common failure patterns in real deployments</h3>
+          <ul>
+            <li>Technology-first pilots without clear public-outcome metrics.</li>
+            <li>Vendor dependence without audit rights or portability controls.</li>
+            <li>English-first or urban-first interfaces in multilingual field settings.</li>
+            <li>No grievance channel when model output causes exclusion or error.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>What better execution looks like</h3>
+          <ul>
+            <li>Mission-linked use cases with measurable baseline and outcome shifts.</li>
+            <li>Risk-tiered governance and escalation protocols before scale-up.</li>
+            <li>Local-language and assisted-access design built from day one.</li>
+            <li>Published evidence reviews that include failures and corrective actions.</li>
+          </ul>
+        </article>
+      </div>
 
       <div class="grid-3">
         <article class="card">
@@ -1401,18 +1501,19 @@
         <article class="card">
           <h3>Progress and Capability Perspectives</h3>
           <ul>
+            <li><a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/1-drivers-of-labour-market-transformation/" target="_blank" rel="noopener">World Economic Forum: Future of Jobs Report 2025 (drivers of labour market transformation)</a></li>
+            <li><a href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" target="_blank" rel="noopener">World Economic Forum press brief: 2025 jobs report highlights</a></li>
+            <li><a href="https://www.imf.org/-/media/Files/Publications/SDN/2024/English/SDNEA2024001.ashx" target="_blank" rel="noopener">IMF Staff Discussion Note: Gen-AI and the Future of Work in Advanced and Developing Economies</a></li>
+            <li><a href="https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" target="_blank" rel="noopener">IMF Blog: AI will transform the global economy</a></li>
             <li><a href="https://blog.samaltman.com/the-gentle-singularity" target="_blank" rel="noopener">Essay on gradual singularity and broad access</a></li>
             <li><a href="https://www.darioamodei.com/essay/machines-of-loving-grace" target="_blank" rel="noopener">Essay on abundance potential and institutional responsibility</a></li>
             <li><a href="https://arxiv.org/abs/2001.08361" target="_blank" rel="noopener">Scaling Laws for Neural Language Models (Kaplan et al.)</a></li>
             <li><a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">Stanford AI Index</a></li>
-            <li><a href="https://www.stateof.ai/" target="_blank" rel="noopener">State of AI Report</a></li>
-            <li><a href="https://www.deepmind.com/about" target="_blank" rel="noopener">DeepMind: mission and approach</a></li>
-            <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2230351" target="_blank" rel="noopener">AI Action Summit (PIB): global AI leaders and pathways</a></li>
+            <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2230351" target="_blank" rel="noopener">AI Action Summit (PIB): global pathways and cooperation</a></li>
             <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=1985585" target="_blank" rel="noopener">PM Narendra Modi at GPAI Summit (PIB)</a></li>
             <li><a href="https://www.forbesindia.com/article/leadership/ai-can-turbocharge-digital-public-infrastructure-and-unleash-benefits-at-scale-nandan-nilekani/95387/1" target="_blank" rel="noopener">Nandan Nilekani on AI + DPI at population scale</a></li>
             <li><a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">IndiaAI Mission (PIB)</a></li>
             <li><a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">India AI Compute Update (PIB)</a></li>
-            <li><a href="https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=60913" target="_blank" rel="noopener">RBI Digital Payments Index</a></li>
             <li>IRMA Alumni Network Context (irma.ac.in/programmes/alumni/overview)</li>
           </ul>
         </article>
@@ -1433,15 +1534,15 @@
       </div>
 
       <div class="sources">
-        <p>[1] IRMA official site: irma.ac.in</p>
-        <p>[2] IRMA Alumni overview (4000+): irma.ac.in/programmes/alumni/overview</p>
-        <p>[3] PIB: IndiaAI Mission outlay ₹10,371.92 crore (7 Mar 2024): <a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">pib.gov.in</a></p>
-        <p>[4] PIB: National compute crossed 34,000 GPUs by 30 May 2025: <a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">pib.gov.in</a></p>
-        <p>[5] RBI: Digital Payments Index March 2025 = 493.22: <a href="https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=60913" target="_blank" rel="noopener">rbi.org.in</a></p>
-        <p>[6] PM Narendra Modi at GPAI Summit: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=1985585" target="_blank" rel="noopener">pib.gov.in</a></p>
-        <p>[7] Nandan Nilekani on AI and Digital Public Infrastructure: <a href="https://www.forbesindia.com/article/leadership/ai-can-turbocharge-digital-public-infrastructure-and-unleash-benefits-at-scale-nandan-nilekani/95387/1" target="_blank" rel="noopener">forbesindia.com</a></p>
-        <p>[8] Scaling laws reference paper: <a href="https://arxiv.org/abs/2001.08361" target="_blank" rel="noopener">arxiv.org</a></p>
-        <p>[9] Capability and governance readings above are intended as a balanced long-term study set for professionals.</p>
+        <p>[1] World Economic Forum, Future of Jobs Report 2025: <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/1-drivers-of-labour-market-transformation/" target="_blank" rel="noopener">weforum.org</a></p>
+        <p>[2] WEF press release, 8 Jan 2025 (86% transformation expectation, 39% skills shift, 78 million net jobs): <a href="https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" target="_blank" rel="noopener">weforum.org</a></p>
+        <p>[3] IMF Staff Discussion Note (Jan 2024): “Almost 40 percent of global employment is exposed to AI”: <a href="https://www.imf.org/-/media/Files/Publications/SDN/2024/English/SDNEA2024001.ashx" target="_blank" rel="noopener">imf.org</a></p>
+        <p>[4] IMF blog summary of AI and global economy implications: <a href="https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" target="_blank" rel="noopener">imf.org</a></p>
+        <p>[5] PIB, Government of India: IndiaAI Mission outlay ₹10,371.92 crore (7 Mar 2024): <a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">pib.gov.in</a></p>
+        <p>[6] PIB, Government of India: National AI compute update (30 May 2025): <a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">pib.gov.in</a></p>
+        <p>[7] PM Narendra Modi at GPAI Summit: <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=1985585" target="_blank" rel="noopener">pib.gov.in</a></p>
+        <p>[8] Nandan Nilekani on AI and Digital Public Infrastructure: <a href="https://www.forbesindia.com/article/leadership/ai-can-turbocharge-digital-public-infrastructure-and-unleash-benefits-at-scale-nandan-nilekani/95387/1" target="_blank" rel="noopener">forbesindia.com</a></p>
+        <p>[9] NIST AI RMF and OECD/UNESCO frameworks (see resources above) for governance controls and implementation standards.</p>
       </div>
 
       <footer class="footer">
