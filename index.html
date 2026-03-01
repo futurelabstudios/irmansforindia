@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRMAns and India’s Path to Abundance</title>
+  <meta name="description" content="A comprehensive report-style website on how the IRMA community can contribute to India’s transition through AI, AGI, and ASI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f4ec;
+      --bg-soft: #f1ede1;
+      --text: #12110d;
+      --muted: #59554c;
+      --card: rgba(255, 255, 255, 0.78);
+      --line: rgba(18, 17, 13, 0.12);
+      --brand: #114c5f;
+      --brand-soft: #2f7d97;
+      --accent: #be8a31;
+      --shadow: 0 22px 45px rgba(17, 76, 95, 0.12);
+      --radius: 16px;
+      --max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Outfit", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(190, 138, 49, 0.18), transparent 34%),
+        radial-gradient(circle at 0% 35%, rgba(47, 125, 151, 0.12), transparent 38%),
+        var(--bg);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 120;
+    }
+
+    .progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--accent));
+      transition: width 0.12s linear;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 4px;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(247, 244, 236, 0.85);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      color: var(--brand);
+      white-space: nowrap;
+    }
+
+    .toc {
+      display: flex;
+      gap: 0.3rem;
+      overflow: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.1rem;
+    }
+
+    .toc::-webkit-scrollbar {
+      display: none;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: var(--brand);
+      border-color: rgba(17, 76, 95, 0.25);
+      background: rgba(17, 76, 95, 0.08);
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.4rem 1rem 4rem;
+    }
+
+    section {
+      margin: 0 0 2.2rem;
+      scroll-margin-top: 86px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(1rem, 2.2vw, 2rem);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Newsreader", serif;
+      letter-spacing: 0.01em;
+      margin: 0 0 0.5rem;
+      line-height: 1.14;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.65rem);
+      max-width: 16ch;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 3vw, 2.2rem);
+    }
+
+    h3 {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      margin-bottom: 0.35rem;
+    }
+
+    p {
+      margin: 0.55rem 0;
+      color: #2e2a22;
+      font-size: clamp(0.96rem, 1.4vw, 1.05rem);
+    }
+
+    .lead {
+      max-width: 72ch;
+      font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+      color: #222017;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(17, 76, 95, 0.09);
+      color: var(--brand);
+      border: 1px solid rgba(17, 76, 95, 0.15);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .stat .value {
+      font-family: "Newsreader", serif;
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      color: #132b35;
+      line-height: 1.1;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 0.2rem;
+    }
+
+    .data-note {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: #5c594f;
+    }
+
+    .chart-wrap {
+      margin-top: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.8rem;
+      overflow: hidden;
+    }
+
+    .svg-chart {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #4f4b42;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 0.32rem;
+      vertical-align: middle;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.12fr 1fr;
+      gap: 1rem;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin: 0.35rem 0;
+    }
+
+    .phase {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .phase::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.45rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(190, 138, 49, 0.2);
+    }
+
+    .phase::after {
+      content: "";
+      position: absolute;
+      left: 0.22rem;
+      top: 1.2rem;
+      width: 2px;
+      height: calc(100% - 0.2rem);
+      background: rgba(190, 138, 49, 0.35);
+    }
+
+    .phase:last-child::after {
+      display: none;
+    }
+
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.8rem;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    .matrix th,
+    .matrix td {
+      border-bottom: 1px solid var(--line);
+      padding: 0.72rem;
+      vertical-align: top;
+      text-align: left;
+      background: #fff;
+    }
+
+    .matrix th {
+      background: #f6fafc;
+      color: #163f4e;
+      font-weight: 600;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .matrix tr:last-child td {
+      border-bottom: none;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+    }
+
+    .snapshot {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.9rem;
+      position: relative;
+    }
+
+    .snapshot::before {
+      content: "\201C";
+      position: absolute;
+      right: 0.7rem;
+      top: -0.2rem;
+      font-family: "Newsreader", serif;
+      font-size: 2.8rem;
+      color: rgba(17, 76, 95, 0.12);
+      line-height: 1;
+    }
+
+    .snapshot p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #2c291f;
+    }
+
+    .snapshot .meta {
+      margin-top: 0.45rem;
+      color: #6d695f;
+      font-size: 0.74rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.8rem 0.9rem;
+      margin-top: 0.65rem;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1c3c48;
+      list-style: none;
+      position: relative;
+      padding-right: 1.3rem;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: -0.05rem;
+      color: var(--brand);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "\2013";
+    }
+
+    details p,
+    details ul {
+      margin-top: 0.55rem;
+      margin-bottom: 0;
+      font-size: 0.94rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    li + li {
+      margin-top: 0.28rem;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.9rem;
+    }
+
+    .action {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .action strong {
+      color: var(--brand);
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 0.2rem;
+    }
+
+    .footnotes {
+      columns: 2;
+      gap: 1.4rem;
+      font-size: 0.84rem;
+      color: #4f4b42;
+      margin-top: 0.9rem;
+    }
+
+    .footnotes p {
+      margin: 0 0 0.45rem;
+      break-inside: avoid;
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    .footnotes a {
+      color: #195672;
+    }
+
+    .cta {
+      text-align: center;
+      padding: clamp(1rem, 2.5vw, 1.8rem);
+      border-radius: 14px;
+      background: linear-gradient(130deg, rgba(17, 76, 95, 0.1), rgba(190, 138, 49, 0.18));
+      border: 1px solid rgba(17, 76, 95, 0.2);
+    }
+
+    .cta p {
+      max-width: 62ch;
+      margin: 0.6rem auto 0;
+    }
+
+    .small {
+      font-size: 0.85rem;
+      color: #5f5a50;
+    }
+
+    @media (max-width: 960px) {
+      .two-col,
+      .three-col {
+        grid-template-columns: 1fr;
+      }
+
+      .footnotes {
+        columns: 1;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.45rem;
+      }
+
+      .brand {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="read-progress"></span></div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">IRMA Abundance Report</div>
+      <nav class="toc" aria-label="Section Navigation">
+        <a href="#overview">Overview</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#transition">AI-AGI-ASI</a>
+        <a href="#irma-edge">IRMAN Edge</a>
+        <a href="#concerns">Concerns & FAQ</a>
+        <a href="#playbook">Action Playbook</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="panel">
+      <span class="eyebrow">Executive Summary</span>
+      <h1>How IRMAns Can Help India Reach Abundance, with AI as a Public Capability</h1>
+      <p class="lead">
+        India is entering a deep transition. AI will not magically solve social fractures, but it can sharply reduce everyday scarcity when paired with field institutions, managerial rigor, and ethical leadership. This is exactly where IRMAns are uniquely positioned: at the point where policy, technology, and lived rural realities meet.
+      </p>
+
+      <div class="hero-meta">
+        <span class="chip">Built for mobile + desktop reading</span>
+        <span class="chip">Grounded in cited public data</span>
+        <span class="chip">Focused on practical, measurable action</span>
+      </div>
+
+      <div class="stats-grid" aria-label="highlights">
+        <article class="stat">
+          <div class="value">4,000+</div>
+          <div class="label">IRMA Alumni Association members</div>
+        </article>
+        <article class="stat">
+          <div class="value">₹10,371.92 Cr</div>
+          <div class="label">IndiaAI Mission outlay (5 years)</div>
+        </article>
+        <article class="stat">
+          <div class="value">34,000+</div>
+          <div class="label">National AI compute GPUs crossed by May 2025</div>
+        </article>
+        <article class="stat">
+          <div class="value">493.22</div>
+          <div class="label">RBI Digital Payments Index (Mar 2025)</div>
+        </article>
+      </div>
+      <p class="data-note">
+        Latest available figures used as of 1 March 2026.
+      </p>
+    </section>
+
+    <section id="numbers" class="panel">
+      <span class="eyebrow">Reality Baseline</span>
+      <h2>India’s Transition Is Already Visible in the Data</h2>
+      <p>
+        Skepticism is healthy. The right response is evidence. These indicators show two realities at once: strong digital acceleration and persistent social complexity. Both must be held together.
+      </p>
+
+      <div class="chart-wrap">
+        <svg id="india-indicators-chart" class="svg-chart" viewBox="0 0 980 430" role="img" aria-label="Bar chart of key India indicators"></svg>
+        <div class="legend">
+          <span><span class="dot" style="background:#1f7088"></span>Higher value = wider current reach (not equal social equity)</span>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat">
+          <div class="value">64.6%</div>
+          <div class="label">Population living in rural India (2024)</div>
+        </article>
+        <article class="stat">
+          <div class="value">81.7%</div>
+          <div class="label">Adult literacy, age 15+ (2023)</div>
+        </article>
+        <article class="stat">
+          <div class="value">70.0%</div>
+          <div class="label">Internet users as share of population (2025)</div>
+        </article>
+        <article class="stat">
+          <div class="value">41.6%</div>
+          <div class="label">Employment in agriculture (2025)</div>
+        </article>
+        <article class="stat">
+          <div class="value">99.5%</div>
+          <div class="label">Access to electricity (2023)</div>
+        </article>
+        <article class="stat">
+          <div class="value">34.4%</div>
+          <div class="label">Gross tertiary enrollment (2024)</div>
+        </article>
+      </div>
+      <p class="small">
+        Interpretation: India has enough infrastructure base to deploy AI at scale, but social adoption must be inclusive by design.
+      </p>
+
+      <div class="chart-wrap">
+        <svg id="dpi-chart" class="svg-chart" viewBox="0 0 1000 420" role="img" aria-label="Line chart of RBI Digital Payments Index"></svg>
+        <div class="legend">
+          <span><span class="dot" style="background:#be8a31"></span>RBI-DPI rose from 100 (Mar 2018 base) to 493.22 (Mar 2025)</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="transition" class="panel">
+      <span class="eyebrow">Systems View</span>
+      <h2>AI, AGI, and ASI: What Changes in Society, Economy, and Politics</h2>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Practical Definitions</h3>
+          <p><strong>AI:</strong> Narrow systems automating specific tasks (translation, call support, crop diagnostics, fraud detection, service triage).</p>
+          <p><strong>AGI:</strong> A future class of systems capable across many cognitive tasks at near-human generality. Timeline remains uncertain.</p>
+          <p><strong>ASI:</strong> Hypothetical intelligence beyond human capability across most domains; high uncertainty and major governance implications.</p>
+          <p>
+            Useful stance for IRMAns: act decisively on today’s AI, prepare institutions for AGI-level capability, and insist on safeguards before any ASI-like concentration of power.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Five-Year Transition Logic (2026-2031)</h3>
+          <div class="phase">
+            <strong>Phase 1: Augmentation</strong>
+            <p>AI copilots improve frontline productivity in health, agriculture, education, and local administration.</p>
+          </div>
+          <div class="phase">
+            <strong>Phase 2: Rewiring</strong>
+            <p>Workflows become data-native: fewer paper bottlenecks, faster entitlement delivery, and more auditable decisions.</p>
+          </div>
+          <div class="phase">
+            <strong>Phase 3: Redistribution</strong>
+            <p>High-quality guidance becomes cheaper and universal; value shifts from routine processing to trust, coordination, and leadership.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="three-col">
+        <article class="card">
+          <h3>Society</h3>
+          <p>Voice-first local-language AI can reduce exclusion where text literacy is limited. Human mediators remain essential.</p>
+        </article>
+        <article class="card">
+          <h3>Economy</h3>
+          <p>SMEs, producer groups, and cooperatives can gain planning, market intelligence, and process discipline at low cost.</p>
+        </article>
+        <article class="card">
+          <h3>Politics</h3>
+          <p>AI can improve transparency and grievance resolution but cannot replace institutions, law, or ethical leadership.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="irma-edge" class="panel">
+      <span class="eyebrow">Community Advantage</span>
+      <h2>Why IRMAns Have a Structural Edge in Building Inclusive Abundance</h2>
+      <p>
+        The transition will be won by people who can translate technology into trust on the ground. IRMAns combine three assets that are rarely found together.
+      </p>
+
+      <table class="matrix" aria-label="IRMAN capability matrix">
+        <thead>
+          <tr>
+            <th>IRMAN Asset</th>
+            <th>AI-Era Advantage</th>
+            <th>Concrete Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rural tacit knowledge</td>
+            <td>Designs around reality, not dashboard assumptions</td>
+            <td>Village-level advisory agents in local language with human escalation</td>
+          </tr>
+          <tr>
+            <td>NGO and development practice</td>
+            <td>Works through trust networks and social legitimacy</td>
+            <td>Responsible AI rollouts through SHGs, producer groups, and local institutions</td>
+          </tr>
+          <tr>
+            <td>Managerial capability</td>
+            <td>Turns pilots into repeatable systems with governance</td>
+            <td>District playbooks, KPI dashboards, audit trails, and scaling protocols</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="three-col">
+        <article class="card">
+          <h3>Design Principle 1</h3>
+          <p>Build for the last-mile first: offline tolerance, voice UX, assisted mode, and grievance routing.</p>
+        </article>
+        <article class="card">
+          <h3>Design Principle 2</h3>
+          <p>Measure trust, not only throughput: repeat usage, complaint closure time, and perceived fairness.</p>
+        </article>
+        <article class="card">
+          <h3>Design Principle 3</h3>
+          <p>Keep humans accountable: AI should recommend, while institutions remain responsible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="concerns" class="panel">
+      <span class="eyebrow">Alumni Dialogue</span>
+      <h2>Conversation Snapshots and FAQ</h2>
+      <p>
+        The strongest objections in the alumni discussion are valid and necessary. Below are selected snapshots from your thread, followed by direct responses.
+      </p>
+
+      <div class="snapshot-grid" aria-label="Conversation snapshots">
+        <article class="snapshot">
+          <p>“Larger than life claims is the issue... without substantial logic leave aside proof.”</p>
+          <div class="meta">Thread 1 • 1 Mar 2026</div>
+        </article>
+        <article class="snapshot">
+          <p>“How can AI solve pseudo beliefs when 50-60% people can’t read or write?”</p>
+          <div class="meta">Thread 1 • 1 Mar 2026</div>
+        </article>
+        <article class="snapshot">
+          <p>“Less marketing, more work should be the agenda.”</p>
+          <div class="meta">Thread 2 • 1 Mar 2026</div>
+        </article>
+        <article class="snapshot">
+          <p>“AI in education and industry we may see in 1-2 years, but saying it will erase social problems is too much.”</p>
+          <div class="meta">Thread 2 • 1 Mar 2026</div>
+        </article>
+      </div>
+
+      <details open>
+        <summary>1. Is this just hype? Where is proof?</summary>
+        <p>
+          Treat all claims as hypotheses until measured. Use a public proof-board: baseline, intervention, outcome, and independent verification. Minimum proof set for any pilot should include service-delivery time, cost per beneficiary, error rate, grievance closure, and trust feedback.
+        </p>
+      </details>
+
+      <details>
+        <summary>2. If literacy is limited, how can AI be inclusive?</summary>
+        <p>
+          Inclusion cannot rely on text-only tools. Build voice-first, local-language, and assisted interfaces. India’s adult literacy rate is estimated at 81.7% (2023), meaning literacy has improved significantly, but accessibility gaps still require human-supported deployment, especially in vulnerable communities.
+        </p>
+      </details>
+
+      <details>
+        <summary>3. Can AI alone fix social polarization or communal divides?</summary>
+        <p>
+          No. AI is not a moral substitute for politics, law, or dialogue. What AI can do is reduce scarcity pressure and improve fairness in service delivery. Social cohesion still depends on leadership, institutions, and norms.
+        </p>
+      </details>
+
+      <details>
+        <summary>4. What tangible outcomes can be delivered this year?</summary>
+        <ul>
+          <li>District-level multilingual citizen helpdesk with documented closure times.</li>
+          <li>AI support stack for frontline fieldworkers in health/agri/livelihood missions.</li>
+          <li>Farmer-producer and SHG planning assistants for market and scheme decisions.</li>
+          <li>Public audit dashboards tracking error rates, inclusion, and grievance outcomes.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5. Are AGI/ASI discussions premature for a poor country?</summary>
+        <p>
+          Daily governance and livelihoods must remain priority. But institutions should still prepare now for stronger AI capability so governance is not forced to react late. A balanced approach is: immediate AI for delivery, medium-term policy for labor transitions, long-term safety architecture for advanced systems.
+        </p>
+      </details>
+    </section>
+
+    <section id="playbook" class="panel">
+      <span class="eyebrow">Implementation</span>
+      <h2>IRMAN Action Playbook: From Conversation to Outcomes</h2>
+      <p>
+        The transition fails without educated leadership that can work across state, market, and civil society. This playbook is designed for immediate collective execution.
+      </p>
+
+      <div class="action-grid">
+        <article class="action">
+          <strong>0-30 Days</strong>
+          <h3>Constitute Mission Cells</h3>
+          <p>Form domain cells: agriculture, health, education, justice-access, livelihoods, and local governance.</p>
+        </article>
+
+        <article class="action">
+          <strong>30-90 Days</strong>
+          <h3>Run 3 Proof Pilots</h3>
+          <p>Select one district and one urban-poor cluster each. Publish baseline and first outcomes openly.</p>
+        </article>
+
+        <article class="action">
+          <strong>90-180 Days</strong>
+          <h3>Publish Open Playbook v1</h3>
+          <p>Create reusable SOPs, model governance checklists, procurement templates, and training toolkits.</p>
+        </article>
+
+        <article class="action">
+          <strong>180-365 Days</strong>
+          <h3>Scale Through Institutions</h3>
+          <p>Partner with state missions, NGOs, and CSR platforms to expand what demonstrably worked.</p>
+        </article>
+      </div>
+
+      <div class="cta">
+        <h3>One Core Commitment</h3>
+        <p>
+          “No claim without evidence, no scale without inclusion, and no technology without human dignity.”
+        </p>
+      </div>
+    </section>
+
+    <section id="sources" class="panel">
+      <span class="eyebrow">Method and Sources</span>
+      <h2>Data References</h2>
+      <p>
+        Figures are compiled from official or primary public sources and reflect the latest available updates as of 1 March 2026.
+      </p>
+
+      <div class="footnotes">
+        <p>[1] World Bank API, India rural population share (SP.RUR.TOTL.ZS), latest value for 2024: <a href="https://api.worldbank.org/v2/country/IND/indicator/SP.RUR.TOTL.ZS?format=json&per_page=5" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[2] World Bank API, India internet users (IT.NET.USER.ZS), latest value for 2025: <a href="https://api.worldbank.org/v2/country/IND/indicator/IT.NET.USER.ZS?format=json&per_page=5" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[3] World Bank API, adult literacy (SE.ADT.LITR.ZS), latest value for 2023: <a href="https://api.worldbank.org/v2/country/IND/indicator/SE.ADT.LITR.ZS?format=json&per_page=10" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[4] World Bank API, employment in agriculture (SL.AGR.EMPL.ZS), latest value for 2025: <a href="https://api.worldbank.org/v2/country/IND/indicator/SL.AGR.EMPL.ZS?format=json&per_page=10" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[5] World Bank API, access to electricity (EG.ELC.ACCS.ZS), latest value for 2023: <a href="https://api.worldbank.org/v2/country/IND/indicator/EG.ELC.ACCS.ZS?format=json&per_page=6" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[6] World Bank API, tertiary enrollment (SE.TER.ENRR), latest value for 2024: <a href="https://api.worldbank.org/v2/country/IND/indicator/SE.TER.ENRR?format=json&per_page=10" target="_blank" rel="noopener">api.worldbank.org</a></p>
+        <p>[7] RBI press release, RBI-DPI for March 2025 and full historical series: <a href="https://www.rbi.org.in/scripts/bs_pressreleasedisplay.aspx/BS_PressReleaseDisplay.aspx?prid=60913" target="_blank" rel="noopener">rbi.org.in</a></p>
+        <p>[8] PIB Cabinet release (7 March 2024), IndiaAI Mission outlay ₹10,371.92 crore: <a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2012357" target="_blank" rel="noopener">pib.gov.in</a></p>
+        <p>[9] PIB strategic technology note, AI compute capacity crossed 34,000 GPUs by 30 May 2025: <a href="https://www.pib.gov.in/PressNoteDetails.aspx?ModuleId=3&NoteId=154788" target="_blank" rel="noopener">pib.gov.in</a></p>
+        <p>[10] IRMA Alumni Association overview, registered body of 4000+ alumni: <a href="https://www.irma.ac.in/programmes/alumni/overview" target="_blank" rel="noopener">irma.ac.in</a></p>
+      </div>
+      <p class="small">
+        Note: AGI/ASI are high-uncertainty categories. Timeline statements in this report are scenarios for planning, not deterministic forecasts.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const indiaIndicators = [
+      { label: "Rural population (2024)", value: 64.6 },
+      { label: "Internet users (2025)", value: 70.0 },
+      { label: "Adult literacy 15+ (2023)", value: 81.7 },
+      { label: "Agriculture employment (2025)", value: 41.6 },
+      { label: "Electricity access (2023)", value: 99.5 },
+      { label: "Tertiary enrollment (2024)", value: 34.4 }
+    ];
+
+    const dpiSeries = [
+      { period: "Mar 2018", value: 100 },
+      { period: "Mar 2019", value: 153.47 },
+      { period: "Sep 2019", value: 173.49 },
+      { period: "Mar 2020", value: 207.84 },
+      { period: "Sep 2020", value: 217.74 },
+      { period: "Mar 2021", value: 270.59 },
+      { period: "Sep 2021", value: 304.06 },
+      { period: "Mar 2022", value: 349.30 },
+      { period: "Sep 2022", value: 377.46 },
+      { period: "Mar 2023", value: 395.57 },
+      { period: "Sep 2023", value: 418.77 },
+      { period: "Mar 2024", value: 445.50 },
+      { period: "Sep 2024", value: 465.33 },
+      { period: "Mar 2025", value: 493.22 }
+    ];
+
+    function renderIndicatorChart() {
+      const svg = document.getElementById("india-indicators-chart");
+      const width = 980;
+      const height = 430;
+      const margin = { top: 22, right: 20, bottom: 118, left: 54 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+      const max = 100;
+      const barGap = 18;
+      const barWidth = (innerWidth - barGap * (indiaIndicators.length - 1)) / indiaIndicators.length;
+
+      const yToPx = (value) => margin.top + innerHeight - (value / max) * innerHeight;
+
+      let grid = "";
+      for (let v = 0; v <= 100; v += 20) {
+        const y = yToPx(v);
+        grid += `<line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="rgba(18,17,13,0.12)" stroke-width="1"></line>`;
+        grid += `<text x="${margin.left - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#6a6558">${v}%</text>`;
+      }
+
+      let bars = "";
+      indiaIndicators.forEach((item, i) => {
+        const x = margin.left + i * (barWidth + barGap);
+        const y = yToPx(item.value);
+        const h = margin.top + innerHeight - y;
+        bars += `<rect x="${x}" y="${y}" width="${barWidth}" height="${h}" rx="8" fill="#1f7088"></rect>`;
+        bars += `<text x="${x + barWidth / 2}" y="${y - 8}" text-anchor="middle" font-size="12" fill="#16333e" font-weight="600">${item.value.toFixed(1)}%</text>`;
+
+        const words = item.label.split(" ");
+        const chunk = [];
+        while (words.length) {
+          chunk.push(words.splice(0, 2).join(" "));
+        }
+        chunk.forEach((line, idx) => {
+          bars += `<text x="${x + barWidth / 2}" y="${height - margin.bottom + 20 + idx * 14}" text-anchor="middle" font-size="11" fill="#4d483d">${line}</text>`;
+        });
+      });
+
+      svg.innerHTML = `${grid}${bars}`;
+    }
+
+    function renderDpiChart() {
+      const svg = document.getElementById("dpi-chart");
+      const width = 1000;
+      const height = 420;
+      const margin = { top: 24, right: 20, bottom: 78, left: 58 };
+      const innerWidth = width - margin.left - margin.right;
+      const innerHeight = height - margin.top - margin.bottom;
+
+      const maxValue = Math.max(...dpiSeries.map((d) => d.value));
+      const minValue = Math.min(...dpiSeries.map((d) => d.value));
+      const paddedMin = Math.floor((minValue - 20) / 20) * 20;
+      const paddedMax = Math.ceil((maxValue + 20) / 20) * 20;
+
+      const xToPx = (idx) => margin.left + (idx / (dpiSeries.length - 1)) * innerWidth;
+      const yToPx = (value) => margin.top + innerHeight - ((value - paddedMin) / (paddedMax - paddedMin)) * innerHeight;
+
+      let grid = "";
+      for (let v = paddedMin; v <= paddedMax; v += 50) {
+        const y = yToPx(v);
+        grid += `<line x1="${margin.left}" y1="${y}" x2="${width - margin.right}" y2="${y}" stroke="rgba(18,17,13,0.12)" stroke-width="1"></line>`;
+        grid += `<text x="${margin.left - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#6a6558">${v}</text>`;
+      }
+
+      const path = dpiSeries
+        .map((d, i) => `${i === 0 ? "M" : "L"}${xToPx(i)},${yToPx(d.value)}`)
+        .join(" ");
+
+      let points = "";
+      dpiSeries.forEach((d, i) => {
+        const x = xToPx(i);
+        const y = yToPx(d.value);
+        points += `<circle cx="${x}" cy="${y}" r="4.5" fill="#be8a31" stroke="#fff" stroke-width="2"></circle>`;
+
+        if (i % 2 === 0 || i === dpiSeries.length - 1) {
+          points += `<text x="${x}" y="${height - margin.bottom + 18}" text-anchor="middle" font-size="10.5" fill="#4f4b42">${d.period}</text>`;
+        }
+      });
+
+      const last = dpiSeries[dpiSeries.length - 1];
+      const lx = xToPx(dpiSeries.length - 1);
+      const ly = yToPx(last.value);
+
+      svg.innerHTML = `
+        ${grid}
+        <path d="${path}" fill="none" stroke="#be8a31" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        ${points}
+        <rect x="${lx - 86}" y="${ly - 52}" width="112" height="30" rx="8" fill="#fff7e9" stroke="#d8b06a"></rect>
+        <text x="${lx - 30}" y="${ly - 33}" text-anchor="middle" font-size="12" fill="#7a5310" font-weight="600">Mar 2025: 493.22</text>
+      `;
+    }
+
+    function setupReadProgress() {
+      const bar = document.getElementById("read-progress");
+      const onScroll = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = `${Math.max(0, Math.min(100, progress))}%`;
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
+
+    function setupActiveToc() {
+      const links = Array.from(document.querySelectorAll(".toc a"));
+      const sections = links
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const id = `#${entry.target.id}`;
+            links.forEach((link) => {
+              link.classList.toggle("active", link.getAttribute("href") === id);
+            });
+          });
+        },
+        { threshold: 0.45 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    renderIndicatorChart();
+    renderDpiChart();
+    setupReadProgress();
+    setupActiveToc();
+  </script>
+</body>
+</html>
